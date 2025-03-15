@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин BIO & Веб-страниц</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин BIO & Веб-страниц</h1>
+    </header>
+
+    <section class="catalog">
+        <div class="item">
+            <h2>Создание BIO</h2>
+            <p>Кастомное BIO для Telegram (неймы, оформление, ссылки).</p>
+            <p class="price">Цена: ⭐ 25 звёзд</p>
+            <a href="https://t.me/pe8ehaht" class="buy-btn">Заказать</a>
+        </div>
+
+        <div class="item">
+            <h2>Веб-страница</h2>
+            <p>Разработка простой HTML-страницы для ваших целей.</p>
+            <p class="price">Цена: ⭐ 50 звёзд</p>
+            <a href="https://t.me/pe8ehaht" class="buy-btn">Заказать</a>
+        </div>
+
+        <div class="item">
+            <h2>Создание Telegram-бота</h2>
+            <p>Разработка базового бота для автоматизации задач.</p>
+            <p class="price">Цена: ⭐ 100 звёзд</p>
+            <a href="https://t.me/pe8ehaht" class="buy-btn">Заказать</a>
+        </div>
+    </section>
+
+    <section class="examples">
+        <h2>Примеры работ</h2>
+        <div class="gallery">
+            <div class="image-container">
+                <img src="example1.jpg" alt="Пример BIO" class="preview-img">
+                <p class="caption">BIO</p>
+            </div>
+            <div class="image-container">
+                <img src="example2.jpg" alt="Пример веб-страницы" class="preview-img">
+                <p class="caption">Веб-страница</p>
+            </div>
+            <div class="image-container">
+                <img src="example3.jpg" alt="Пример Telegram-бота" class="preview-img">
+                <p class="caption">Telegram-бот</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Image Container -->
+    <div id="fullscreen" class="fullscreen-container">
+        <img src="" alt="Fullscreen Image" id="fullscreen-img" class="opened">
+        <button class="close-btn" onclick="closeFullscreen()">Закрыть</button>
+    </div>
+
+    <footer>
+        <p>© 2025 Магазин BIO & Веб-страниц | <a href="https://t.me/pe8ehaht">Связаться в Telegram</a></p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.preview-img');
+        const fullscreenContainer = document.getElementById('fullscreen');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        const closeBtn = document.querySelector('.close-btn');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                fullscreenContainer.style.display = 'block';
+                fullscreenImg.src = img.src;
+                closeBtn.style.display = 'block';
+            });
+        });
+
+        function closeFullscreen() {
+            fullscreenContainer.style.display = 'none';
+            closeBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
